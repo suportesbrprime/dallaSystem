@@ -1,54 +1,22 @@
-import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './Pages/Login';
+import PainelGeral from './Pages/PainelGeral';
+import Testes from './Pages/Testes';
+// import Execucao from './Pages/Execucao';
 
-function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aqui você pode adicionar a lógica de autenticação
-    console.log('Username:', username);
-    console.log('Password:', password);
-  };
-
-  return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Username:
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
-      </form>
-    </div>
-  );
-}
 
 function App() {
   return (
-    <div>
-      <Login />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />}/>
+        <Route path="/painelGeral" element={<PainelGeral />}/>
+        <Route path="/Testes" element={<Testes />}/>
+        {/* <Route path="/sobremim" element={<Execucao />}/> */}
+        <Route path="*" element={<div>Página não encontrada</div>}/>
+      </Routes>
+   </BrowserRouter>
   );
 }
 

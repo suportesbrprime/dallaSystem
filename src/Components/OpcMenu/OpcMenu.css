@@ -1,0 +1,12 @@
+.itemMenu {
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+.itemMenu a {
+    color: white;
+    text-decoration: none;
+}
