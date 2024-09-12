@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Dalla Control System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um sistema desenvolvido com **React** para controlar o funcionamento de uma **Dalla**. O sistema é responsável pelo controle de operações da Dalla, incluindo:
 
-## Available Scripts
+- **Início** e **parada** da Dalla
+- Controle de **reversão**
+- Leitura de **QR Codes** utilizando uma câmera acoplada à Dalla
 
-In the project directory, you can run:
+O sistema é projetado para ser integrado a um sistema maior de **rastreabilidade**, permitindo monitoramento e controle preciso.
 
-### `npm start`
+## 📋 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Controle do início** e **parada** da Dalla.
+- Função de **reversão** para alterar a direção da Dalla.
+- Integração com uma câmera para **leitura de QR Codes**, utilizada para registrar dados de rastreabilidade.
+- Interface intuitiva e responsiva para controle total das operações da Dalla.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm test`
+- **React**: Para a construção da interface e controle de estados do sistema.
+- **Bibliotecas de Leitura de QR Codes**: Utilizadas para capturar e decodificar os códigos lidos pela câmera.
+- **Integração com Sistema de Rastreabilidade**: Conexão direta com o sistema de rastreabilidade para garantir que as operações da Dalla sejam registradas corretamente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Instalação e Execução
 
-### `npm run build`
+1. Clone este repositório:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ``` bash
+   git clone https://github.com/usuario/dalla-control-system.git
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Instale as dependências:
+  ``` bash
+    npm install
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Execute o sistema:
+   ``` bash
+      npm start
+  ```
 
-### `npm run eject`
+## 📦 Estrutura do Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **/src/components**: Componentes React reutilizáveis.
+- **/src/pages**: Páginas de Navegação.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
