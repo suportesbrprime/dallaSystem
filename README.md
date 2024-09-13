@@ -1,6 +1,6 @@
-# Dalla Control System
+# Dala Control System
 
-Este projeto é um sistema desenvolvido com **React** para controlar o funcionamento de uma **Dalla**. O sistema é responsável pelo controle de operações da Dalla, incluindo:
+Este projeto é um sistema desenvolvido com **React** para controlar o funcionamento de uma **Dala**. O sistema é responsável pelo controle de operações da Dalla, incluindo:
 
 - **Início** e **parada** da Dalla
 - Controle de **reversão**
