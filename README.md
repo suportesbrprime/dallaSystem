@@ -19,7 +19,7 @@ O sistema é projetado para ser integrado a um sistema maior de **rastreabilidad
 
 - **React**: Para a construção da interface e controle de estados do sistema.
 - **Bibliotecas de Leitura de QR Codes**: Utilizadas para capturar e decodificar os códigos lidos pela câmera.
-- **Integração com Sistema de Rastreabilidade**: Conexão direta com o sistema de rastreabilidade para garantir que as operações da Dalla sejam registradas corretamente.
+- **Integração com Sistema de Rastreabilidade**: Conexão direta com o sistema de rastreabilidade para garantir que as operações da Dala sejam registradas corretamente.
 
 ## 🚀 Instalação e Execução
 
