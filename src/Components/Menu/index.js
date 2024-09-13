@@ -1,16 +1,20 @@
 import OpcMenu from '../OpcMenu'
 import './Menu.css'
-import { FaHouse } from "react-icons/fa6";
 
-const Menu = ({campo}) =>{
+const Menu = ({itens}) =>{
 
     return (
-        <header>
+        <header>  
             <nav>
-                <ul className='lista'>
-                    <OpcMenu campo="Painel Geral" to="/" icone={<FaHouse size={20} color='white'/>}/>
-                    <OpcMenu campo="Painel Geral" to="/" icone={<FaHouse size={20} color='white'/>}/>
-                    <OpcMenu campo="Painel Geral" to="/" icone={<FaHouse size={20} color='white'/>}/>
+                <ul className='menu'>
+                    {itens.map((item, index) => (
+                        <OpcMenu 
+                            key={index}
+                            icone={item.icone}
+                            to={item.to}
+                            campo={item.campo}
+                        />
+                    ))}
                 </ul>
             </nav>
         </header>

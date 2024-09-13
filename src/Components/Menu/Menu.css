@@ -4,15 +4,17 @@
     box-sizing: border-box;
 }
 
-header{
-    background: linear-gradient(to right, #008747 , #05C66B);
-    width: 100%;
+header {
+    background: linear-gradient(90deg, #008747, #05C66B); 
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.lista{
+.menu {
+    list-style: none;
     display: flex;
-    list-style-type: none;
     gap: 20px;
-    align-items: center;
+    padding: 0;
 }

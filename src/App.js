@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />}/>
         <Route path="/painelGeral" element={<PainelGeral />}/>
-        <Route path="/Testes" element={<Testes />}/>
+        <Route path="/testes" element={<Testes />}/>
         {/* <Route path="/sobremim" element={<Execucao />}/> */}
         <Route path="*" element={<div>Página não encontrada</div>}/>
       </Routes>

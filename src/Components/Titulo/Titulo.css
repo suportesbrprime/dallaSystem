@@ -1,0 +1,14 @@
+.titulo{
+    font-family: 'Inter';
+    padding: 30px 0 0 20px;
+}
+
+.titulo h2{
+    color: #009B50;
+    font-size: 28px;
+}
+
+.titulo p{
+    color: #2E3047;
+    font-size: 14px;
+}
