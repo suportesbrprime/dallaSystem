@@ -1,47 +1,46 @@
-import './Formulario.css'
-import { useState } from 'react';
+import Input from '../InputTexto';
+import '../Formulario/Formulario.css';
+import React, { useState } from 'react';
 
-const Formulario = () =>{
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+const Formulario = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aqui você pode adicionar a lógica de autenticação
-    console.log('Username:', username);
+    // Aqui você pode adicionar a lógica para enviar os dados do formulário
+    console.log('Email:', email);
     console.log('Password:', password);
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div class ='estrutura_login'>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Username:
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+        <div class ='style_email'>
+            <Input 
+              nome="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            
             />
-          </label>
         </div>
-        <div>
-          <label>
-            Password:
-            <input
-              type="password"
+        <div class ='style_senha'>
+            <Input 
+              nome="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </label>
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
+
+         </div>
+         <div class ='style_botao'>
+            <button type='submit'>
+              Entrar
+            </button>
+         </div>
+       
       </form>
     </div>
   );
-}
+};
 
-export default Formulario
+export default Formulario;
