@@ -11,8 +11,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 35%;
-  padding: 2%;
+  width: 100%;
+  max-width: 350px;
+  padding: 5%;
   border: auto solid #ffffff;
   border-radius: auto;
   background-color: #ffffff;
@@ -59,7 +60,7 @@
 .logo {
   display: block;
   margin: 0 0 20px;
-  width: 70%; /* Ajuste o tamanho conforme necessário */
+  width: 50%; /* Ajuste o tamanho conforme necessário */
 }
 
 .estrutura_login_email,
@@ -72,7 +73,8 @@
 .style_botao {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  width: 110%;
 }
 
 .submit-button {
@@ -82,7 +84,6 @@
   border: none;
   border-radius: 20px;
   color: #fff;
-  cursor: pointer;
   font-size: 16px;
 }
 
@@ -90,14 +91,17 @@
   background-color: #007B3A;
 }
 
-.nome_terms {
+.terms {
+  margin-left: 5px;
   font-size: 12px;
   font-family: Inter, sans-serif;
 }
 
 .estrutura_login_terms {
+  display: flex;
   width: 100%;
-  height: 30px;
+  height: 40px;
+  margin-bottom: 40px;
 }
 .estrutura_login_img {
   margin-left: 100px;
@@ -106,4 +110,8 @@
   justify-content: flex-end;
   align-items: flex-end;
   background-color: #ffffff;
+}
+.check_terms{
+ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

@@ -38,16 +38,14 @@ const Formulario = () => {
             />
           </div>
           <div className="estrutura_login_terms">
-            <label>
-              <input
-                type="checkbox"
-                checked={termsAccepted}
-                onChange={(e) => setTermsAccepted(e.target.checked)}
-              />
-              <span className='nome_terms'>
-                Aceito os <a>Termos de Uso</a> e <a>Política de Privacidade</a> da Plataforma
-              </span>
-            </label>
+            <input className='check_terms'
+              type="checkbox"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}  
+            />
+            <span className='terms'> 
+              Aceito os Termos de Uso e Política de Privacidade da Plataforma
+            </span>             
           </div>
           <div className="style_botao">
             <button type="submit" className="submit-button">
