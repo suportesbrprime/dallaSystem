@@ -14,6 +14,10 @@ const Testes = () => {
         { icone: <FaRegCheckCircle size={20} color="white" />, to: '/testes', campo: 'Testes'},
     ]
 
+    const botoes = [
+        {evento:sincronizar, icone: <LuRefreshCw  size={20}/>, textoBtn:"Sincronizar"}
+    ]
+
     const data = [
         { titulo: "Câmera", status: 'Status da câmera', leitura: 'Leitura de QR Code', dala: false, infoAdd: 'CÓDIGO QR CODE' },
         { titulo: "Dala" ,status: 'Status da dala', leitura: '', dala: true, infoAdd: 'Direção da Dala: ' },
@@ -25,7 +29,7 @@ const Testes = () => {
 
     return (
         <section> 
-            <Menu itens={itensMenu} icone={<LuRefreshCw  size={20}/>} textoBtn="Sincronizar" evento={sincronizar}/>
+            <Menu itens={itensMenu} botoes={botoes}/>
 
             <Titulo titulo="Testes" subtitulo="Testes os módulos externos do sistema"/>
 

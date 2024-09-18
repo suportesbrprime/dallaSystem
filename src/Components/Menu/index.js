@@ -1,13 +1,13 @@
 import OpcMenu from '../OpcMenu'
 import './Menu.css'
 
-const Menu = ({itens, icone, textoBtn, evento}) =>{
+const Menu = ({itens, botoes}) =>{
 
     return (
         <header>  
             <nav>
                 <ul className='menu'>
-                    {itens.map((item, index) => (
+                    {itens ?  itens.map((item, index) => (
                         <OpcMenu 
                             key={index}
                             icone={item.icone}
@@ -15,11 +15,13 @@ const Menu = ({itens, icone, textoBtn, evento}) =>{
                             campo={item.campo}
                             evento={item.evento}
                         />
+                    )) : ""}
+                    {botoes.map((botao, index) => (
+                        <div key={index} className={botoes ? "btns" : "none"}>
+                            <button onClick={botao.evento}><span>{botao.icone}</span> {botao.textoBtn}</button>
+                        </div>
                     ))}
-
-                    <div className={evento ? "btns" : "none"}>
-                        <button onClick={evento}><span>{icone}</span> {textoBtn}</button>
-                    </div>
+                    
 
                 </ul>
             </nav>
