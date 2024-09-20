@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './CardExecucao.css'
+import './CardExecucaoSimulador.css'
 import { useNavigate } from 'react-router-dom';
 
-const CardExecucao = ({ titulo, status, evento }) => {
+const CardExecucaoSimulador = ({ titulo, status, evento }) => {
 
     const [cameraConectada, setCameraConectada] = useState(false);
     const [dalaConectada, setDalaConectada] = useState(false);
@@ -31,17 +31,17 @@ const CardExecucao = ({ titulo, status, evento }) => {
     return (
 
         <div className='container'>
-            <div className={evento ? "boxCard" : "boxCard opacity"}>
+            <div className= "boxCardSimulador">
                 <div className='titleCard'>
                     {titulo}
                 </div>
 
-                <div className='btnsConexao'>
-                    <button disabled={!evento} onClick={conectaCamera} className={cameraConectada ? "btnsLigado" : "btnsDesligado" }>{cameraConectada ? "Desconectar Câmera" : "Conectar Câmera" }</button>
-                    <button disabled={!evento} onClick={conectaDala} className={dalaConectada ? "btnsLigado" : "btnsDesligado" }>{dalaConectada ? "Desconectar Dala" : "Conectar Dala" }</button>
+                <div className='btnsConexaoSimulador'>
+                    <button onClick={conectaCamera} className="btnsLigadoSimulador">Iniciar</button>
+                    <button onClick={conectaDala} className="btnsLigadoSimulador">Próximo Item</button>
                 </div>
 
-                <div className='status'>    
+                <div className='statusSimulador'>    
                     <span>Status do processo:</span>
                     {status.map((item, index) => (
                         <div index={index}>
@@ -51,10 +51,15 @@ const CardExecucao = ({ titulo, status, evento }) => {
                     ))} 
                 </div>
 
-                <div className='trocaDeLote'>
+                <div className='middleBtns'>
+                    <button onClick={() => trocaLote}>Trocar lote</button>
+                    <button onClick={voltaPainel}>Finalizar Processo</button>
+                </div>
+
+                <div className='downBtns'>
                     <span>Faltou produto no lote?</span>
-                    <button disabled={!evento} onClick={() => trocaLote}>Trocar lote</button>
-                    <button disabled={!evento} onClick={voltaPainel}>Voltar ao painel geral</button>
+                    <button className='trocaDeLoteSimulador' onClick={() => trocaLote}>Trocar lote</button>
+                    <button className='finalizarSimulador' onClick={voltaPainel}>Finalizar Processo</button>
                 </div>
                 
             </div>
@@ -63,4 +68,4 @@ const CardExecucao = ({ titulo, status, evento }) => {
     );
 }
 
-export default CardExecucao
+export default CardExecucaoSimulador

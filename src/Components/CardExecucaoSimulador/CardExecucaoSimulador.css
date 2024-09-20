@@ -1,4 +1,4 @@
-.boxCard{
+.boxCardSimulador{
     display: flex;
     width: 364px;
     flex-direction: column;
@@ -24,32 +24,22 @@
     border-top-right-radius: 5px;
 }
 
-.btnsConexao{
+.btnsConexaoSimulador{
     display: flex;
     flex-direction: column;
 }
 
-.btnsDesligado{
+.btnsLigadoSimulador{
     background-color: #9DE6FB;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     border: none;
     border-radius: 4px;
     font-size: 18px;
     cursor: pointer;
 }
 
-.btnsLigado{
-    background-color: #FFBBBB;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.status{
+.statusSimulador{
     padding: 10px;
     display: flex;
     justify-content: left;
@@ -64,16 +54,42 @@
     align-items: flex-start;
 }
 
-.trocaDeLote{
+.middleBtns{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
 
-.trocaDeLote button{
+.middleBtns button{
+    background-color: #EEA51D;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.downBtns{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.trocaDeLoteSimulador{
     background-color: #EEA51D;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.finalizarSimulador{
+    background-color: #FFBBBB;
+    padding: 10px;
+    margin: 5px;
     border: none;
     border-radius: 4px;
     font-size: 18px;

@@ -11,23 +11,24 @@ import { useState } from 'react';
 
 const Execucao = () => {    
 
-    const [cancelarOrdem, setCancelarOrdem] = useState(false)
+    const [cancelarOrdem, setCancelarOrdem] = useState(false);
+    const [iniciarOrdem, setIniciarOrdem] = useState(false);
 
     const botoes = [
          {evento: iniciar, icone: <FaRegPlayCircle size={20}/>, textoBtn: "Iniciar"},
          {evento: pausar, icone: <FaRegPauseCircle size={20}/>, textoBtn: "Pausar"},
          {evento: cancelar, icone: <FaRegCircleXmark size={20}/>, textoBtn: "Cancelar"}
-    ]
+    ];
 
     const listaClientes = [
         {nome: "Maicon Tomasi", order: "43423452"},
         {nome: "Maicon Wasmann", order: "543543"},
-    ]
+    ];
 
     const listaProdutos = [
         {nome: "Produto 1", codigo: "1234566", quantidade: 58, peso: 90},
         {nome: "Produto 1", codigo: "1234566", quantidade: 58, peso: 90}, 
-    ]
+    ];
 
     const listStatus = [
         {status: "Câmera Conectada"},
@@ -42,18 +43,18 @@ const Execucao = () => {
         {status: "Leitura do Qr code realizada"},
         {status: "Leitura não realizada"},
         {status: "Leitura do Qr code realizada"}
-    ]
+    ];
 
     const listErros = [
         {erroQrCode: 2, erroProduto: 5, erroLote: 10}
-    ]
+    ];
 
     function iniciar(){
-        console.log("Funfo")
+        setIniciarOrdem(true)
     }
 
-    function pausar(){
-        console.log("Funfo")
+    function pausar(){  
+        setIniciarOrdem(false)
     }
 
     function cancelar(){
@@ -76,12 +77,13 @@ const Execucao = () => {
                 <CardExecucao 
                     titulo="Execução"
                     status={listStatus}
-                
+                    evento={iniciarOrdem}
                 />
 
                 <CardHistorico
                     titulo="Histórico"
                     erros={listErros}
+                    evento={iniciarOrdem}
                 />
             </div>
 

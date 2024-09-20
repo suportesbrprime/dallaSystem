@@ -1,6 +1,7 @@
 .boxCard{
     display: flex;
-    width: 400px;
+    width: 364px;
+    max-height: 468px;
     flex-direction: column;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
@@ -8,6 +9,7 @@
     margin: 30px 20px;
     font-family: 'Inter';
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 .titleCard{
@@ -20,32 +22,16 @@
     border-top-right-radius: 5px;
 }
 
-.dados {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    padding: 10px 15px;
-}
 
-.section-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.dados span {
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.histDiv{
+.qrCode{
     width: 100%;
-    max-width: 456px;
-    height: 260px;
-    max-height: 260px;
-    resize: none;
-    outline: none;
-    border: 1px solid #73EB7B;
-    border-radius: 5px;
+    background-color: #E5FFE7;
+    padding: 10px 10px;
+    font-size: 17px;
+    border-bottom: 1px solid #313131;
+}
+
+.qrCode p{
+    padding: 5px;
+    margin-bottom: 15px;
 }

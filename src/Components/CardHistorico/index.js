@@ -1,11 +1,11 @@
 import './CardHistorico.css'
 
-const CardHistorico = ({ titulo, total, erros }) => {
+const CardHistorico = ({ titulo, total, erros, evento }) => {
 
     return(
 
         <div className='container'>
-            <div className='boxCard'>
+            <div className={evento ? "boxCard" : "boxCard opacity"}>
                 <div className='titleCard'>
                     {titulo}
                 </div>
@@ -24,7 +24,9 @@ const CardHistorico = ({ titulo, total, erros }) => {
 
                 <div className='dados'>
                     <span className='section-title'>HISTÓRICO DE ERROS</span>
-                    <textarea className='histTextarea'></textarea>
+                    <div className='histDiv'>
+                        
+                    </div>
                 </div>
 
             </div>

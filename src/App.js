@@ -4,6 +4,7 @@ import Login from './Pages/Login';
 import PainelGeral from './Pages/PainelGeral';
 import Testes from './Pages/Testes';
 import Execucao from './Pages/Execucao';
+import Simulacao from './Pages/Simulacao';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/painelGeral" element={<PainelGeral />}/>
         <Route path="/testes" element={<Testes />}/>
         <Route path="/execucao" element={<Execucao />}/>
+        <Route path="/simulacao" element={<Simulacao />}/>
         <Route path="*" element={<div>Página não encontrada</div>}/>
       </Routes>
    </BrowserRouter>

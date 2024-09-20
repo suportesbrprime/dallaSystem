@@ -4,6 +4,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { LuRefreshCw } from "react-icons/lu";
 import Titulo from "../../Components/Titulo";
 import Card from "../../Components/Card";
+import { SlControlPlay } from "react-icons/sl";
 
 
 
@@ -12,6 +13,7 @@ const Testes = () => {
     const itensMenu = [
         { icone: <FaHouse size={19} color="white" />, to: '/painelGeral', campo: 'Painel Geral'},
         { icone: <FaRegCheckCircle size={20} color="white" />, to: '/testes', campo: 'Testes'},
+        { icone: <SlControlPlay size={20} color="white" />, to: '/simulacao', campo: 'Simulação'},
     ]
 
     const botoes = [
