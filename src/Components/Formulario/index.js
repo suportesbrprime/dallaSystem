@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Input from '../InputTexto';
 import './Formulario.css';
 import ModalTerms from '../ModalTerms';
+import { useHistory } from 'react-router-dom';
+import '../CardLogin';
 
 const Formulario = () => {
   const [email, setEmail] = useState('');
@@ -14,6 +16,7 @@ const Formulario = () => {
     console.log('Email:', email);
     console.log('Password:', password);
     console.log('Terms Accepted:', termsAccepted);
+ 
   };
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
