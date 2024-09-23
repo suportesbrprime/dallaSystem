@@ -68,6 +68,9 @@ const Formulario = () => {
               Entrar
             </button>
           </div> 
+          <div className="forgot-password">
+              <a href="/esqueci-minha-senha">Esqueci minha senha</a>
+          </div>
         </form>
       </div>
       {isTermsOpen && (
