@@ -11,7 +11,6 @@ const PainelGeral = () =>{
     const itensMenu = [
         { icone: <FaHouse size={19} color="white" />, to: '/painelGeral', campo: 'Painel Geral'},
         { icone: <FaRegCheckCircle size={20} color="white" />, to: '/testes', campo: 'Testes'},
-        { icone: <SlControlPlay size={20} color="white" />, to: '/simulacao', campo: 'Simulação'},
     ]
 
     const botoes = [

@@ -4,18 +4,21 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+.cabecalho, td {
     border: none;
     padding: 8px;
     text-align: left;
 }
 
-th {
-    background: linear-gradient(to right, #009B50, #004323); 
+.cabecalho th {
+    background-color:  #009B50; /* Cor de fundo verde */ 
     color: white; /* Cor do texto branco */
     font-weight: bold; /* Texto em negrito */
 
     border: none;
+}
+.sub-table-header th{
+    background-color:#dad9d9 ;
 }
 
 tr:nth-child(even) {
@@ -26,9 +29,6 @@ tr:nth-child(odd) {
     background-color: #ffffff; /* Cor de fundo branco */
 }
 
-tr:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse */
-}
 
 .table {
     padding-bottom: 0;
@@ -54,4 +54,10 @@ tr:hover {
 }
 .header-cell{
     color: white;
+}
+.sub-table-header{
+    background-color: #ffffff;
+}
+.no-bullets{
+    list-style-type: none;
 }

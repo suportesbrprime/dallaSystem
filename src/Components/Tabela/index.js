@@ -37,26 +37,26 @@ const Tabela = () => {
     }
 
     return (
-        <TableContainer  component={Paper}>
-            <Table sx={{ maxWidth: 1250, marginLeft:'40px' }} aria-label="simple table">
-                <TableHead>
+        <TableContainer  component={Paper} sx={{height:'420px'}}>
+            <Table sx={{ maxWidth: 1250, marginLeft:'40px'}} aria-label="simple table">
+                <TableHead className='cabecalho'>
                     <TableRow >
-                        <TableCell sx={{color: '#ffffff', border:'none'}}>Ordem</TableCell>
-                        <TableCell sx={{color: '#ffffff', border:'none'}}>Execução</TableCell>
-                        <TableCell sx={{color: '#ffffff', border:'none'}}>Veículo</TableCell>
-                        <TableCell sx={{color: '#ffffff', border:'none'}}>Itens</TableCell>
-                        <TableCell sx={{color: '#ffffff', border:'none'}}>Detalhes</TableCell>
+                        <TableCell  sx={{color: '#ffffff', border:'none'}}>Ordem</TableCell>
+                        <TableCell  sx={{color: '#ffffff', border:'none'}}>Execução</TableCell>
+                        <TableCell  sx={{color: '#ffffff', border:'none'}}>Veículo</TableCell>
+                        <TableCell  sx={{color: '#ffffff', border:'none'}}>Itens</TableCell>
+                        <TableCell  sx={{color: '#ffffff', border:'none'}}>Detalhes</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row, index) => (
                         <React.Fragment key={row.id}>
-                            <TableRow sx={{ backgroundColor: (index % 2 === 0) ? '#ffffff' : '#f9f9f9' }}>
+                            <TableRow sx={{ backgroundColor: (index % 2 === 0) ? '#ffffff' : '#E6E6E6'}}>
                                 <TableCell className="header-cell">{row.ordem}</TableCell>
                                 <TableCell className="header-cell">{row.execucao}</TableCell>
                                 <TableCell className="header-cell">{row.veiculo}</TableCell>
-                                <TableCell >{row.itens}</TableCell>
-                                <TableCell className='ancoras'>
+                                <TableCell>{row.itens}</TableCell>
+                                <TableCell>
                                     <IconButton onClick={() => mostrarDetalhes(row.id)}>
                                         <ExpandMoreIcon className={`expand-icon ${detalhesVisiveis === row.id ? 'expanded' : ''}`} />
                                     </IconButton>
@@ -67,9 +67,38 @@ const Tabela = () => {
                             <TableRow>
                                 <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5}>
                                     <Collapse in={detalhesVisiveis === row.id} timeout="auto" unmountOnExit>
-                                        <div>
-                                            {row.detalhes}
-                                        </div>
+                                    <Table size="small" aria-label="sub table" sx={{borderRadius:'100px', marginBottom: '10px'}}>
+                                            <TableHead className="sub-table-header" sx={{ backgroundColor: '#f0f0f0', color: '#fffffff' }}>
+                                                <TableRow>
+                                                    <TableCell>Cliente</TableCell>
+                                                    <TableCell>Produtos</TableCell>
+                                                    <TableCell>Quantidade</TableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                <TableRow>
+                                                    <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 1</TableCell>
+                                                    <TableCell sx={{fontFamily:'inter'}}>{row.produtos}<ul className="no-bullets"><li>Produto 1</li></ul></TableCell>
+                                                    <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li></ul></TableCell>
+                                                </TableRow>
+                                            </TableBody>
+                                        </Table>
+                                        <Table size="small" aria-label="sub table" sx={{backgroundColor:'white'}}>
+                                            <TableHead className='sub-table-header'>
+                                                <TableRow>
+                                                    <TableCell>Cliente</TableCell>
+                                                    <TableCell>Produtos</TableCell>
+                                                    <TableCell>Quantidade</TableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                <TableRow>
+                                                    <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 2</TableCell>
+                                                    <TableCell sx={{fontFamily:'inter'}}>{row.produtos} <ul className="no-bullets"><li>Produto 1</li><li>Produto 2</li><li>Produto 3</li></ul></TableCell>
+                                                    <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li><li>100</li><li>80</li></ul></TableCell>
+                                                </TableRow>
+                                            </TableBody>
+                                        </Table>
                                     </Collapse>
                                 </TableCell>
                             </TableRow>
