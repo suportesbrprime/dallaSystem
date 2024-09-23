@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login';
-import PainelGeral from './Pages/PainelGeral';
-import Testes from './Pages/Testes';
-import Execucao from './Pages/Execucao';
-import Simulacao from './Pages/Simulacao';
+import PainelGeral from './Pages/Operador/PainelGeral';
+import Testes from './Pages/Operador/Testes';
+import Execucao from './Pages/Operador/Execucao';
+import Simulacao from './Pages/Operador/Simulacao';
+import PainelGeralAdmin from './Pages/Admin/PainelGeralAdmin';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/testes" element={<Testes />}/>
         <Route path="/execucao" element={<Execucao />}/>
         <Route path="/simulacao" element={<Simulacao />}/>
+        <Route path="/painelGeralAdmin" element={<PainelGeralAdmin />}/>
         <Route path="*" element={<div>Página não encontrada</div>}/>
       </Routes>
    </BrowserRouter>

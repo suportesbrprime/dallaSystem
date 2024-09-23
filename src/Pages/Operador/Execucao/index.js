@@ -1,12 +1,12 @@
 import './Execucao.css'
 import { FaRegPlayCircle, FaRegPauseCircle } from "react-icons/fa";
 import { FaRegCircleXmark } from "react-icons/fa6";
-import Menu from "../../Components/Menu";
-import Titulo from "../../Components/Titulo";
-import CardsDados from "../../Components/Cardsdados";
-import CardExecucao from "../../Components/CardExecucao";
-import CardHistorico from '../../Components/CardHistorico';
-import ModalAlert from '../../Components/ModalAlerts';
+import Menu from "../../../Components/Menu";
+import Titulo from "../../../Components/Titulo";
+import CardsDados from "../../../Components/Cardsdados";
+import CardExecucao from "../../../Components/CardExecucao";
+import CardHistorico from '../../../Components/CardHistorico';
+import ModalAlert from '../../../Components/ModalAlerts';
 import { useState } from 'react';
 
 const Execucao = () => {    

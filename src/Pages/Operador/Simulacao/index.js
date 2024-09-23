@@ -1,17 +1,17 @@
 import { FaHouse } from 'react-icons/fa6'
-import Menu from '../../Components/Menu'
+import Menu from '../../../Components/Menu'
 import './Simulacao.css'
 import { FaRegCheckCircle } from 'react-icons/fa'
 import { LuRefreshCw } from 'react-icons/lu'
 import { SlControlPlay } from "react-icons/sl";
-import CardsListaDeLeitura from '../../Components/CardsListaDeLeitura'
-import Titulo from '../../Components/Titulo'
-import CardExecucaoSimulador from '../../Components/CardExecucaoSimulador'
-import CardHistorico from '../../Components/CardHistorico'
+import CardsListaDeLeitura from '../../../Components/CardsListaDeLeitura'
+import Titulo from '../../../Components/Titulo'
+import CardExecucaoSimulador from '../../../Components/CardExecucaoSimulador'
+import CardHistorico from '../../../Components/CardHistorico'
 import { useState } from 'react'
-import ModalAlert from '../../Components/ModalAlerts'
+import ModalAlert from '../../../Components/ModalAlerts'
 import { useNavigate } from 'react-router-dom'
-import InputFile from '../../Components/InputFile'
+import InputFile from '../../../Components/InputFile'
 
 const Simulacao = () => {
 

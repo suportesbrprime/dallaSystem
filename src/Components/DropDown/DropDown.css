@@ -1,0 +1,30 @@
+.boxDrop{
+    position: absolute;
+    left: 300px;
+    top: 45px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.boxDrop button{
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter';
+    padding: 5px;
+    background-color: white;
+}
+
+.boxDrop button:hover{
+    background-color: #dddddd;
+}
+
+.boxDrop button a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}

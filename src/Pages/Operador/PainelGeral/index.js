@@ -1,9 +1,9 @@
-import Menu from "../../Components/Menu"
+import Menu from "../../../Components/Menu"
 import { FaHouse } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { LuRefreshCw } from "react-icons/lu";
 import { SlControlPlay } from "react-icons/sl";
-import Tabela from "../../Components/Tabela";
+import Tabela from "../../../Components/Tabela";
 import './PainelGeral.css'
 
 const PainelGeral = () =>{

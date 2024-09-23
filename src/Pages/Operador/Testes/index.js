@@ -1,9 +1,9 @@
-import Menu from "../../Components/Menu"
+import Menu from "../../../Components/Menu"
 import { FaHouse } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { LuRefreshCw } from "react-icons/lu";
-import Titulo from "../../Components/Titulo";
-import Card from "../../Components/Card";
+import Titulo from "../../../Components/Titulo";
+import Card from "../../../Components/Card";
 import { SlControlPlay } from "react-icons/sl";
 
 
