@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import './CardExecucaoSimulador.css'
-import { useNavigate } from 'react-router-dom';
 
 const CardExecucaoSimulador = ({ titulo, status, evento }) => {
 
-    const [cameraConectada, setCameraConectada] = useState(false);
+    const [iniciar, setIniciar] = useState(false)
     const [dalaConectada, setDalaConectada] = useState(false);
 
     const [loteTrocado, setLoteTrocado] = useState(false);
 
-    const navegar = useNavigate();
 
-    function conectaCamera(){
-        setCameraConectada(!cameraConectada);
+    function inicar(){
+        setIniciar(!iniciar);
+
+        
+
     }
 
     function conectaDala(){
@@ -24,10 +25,6 @@ const CardExecucaoSimulador = ({ titulo, status, evento }) => {
         setLoteTrocado(!loteTrocado)
     }
 
-    function voltaPainel(){
-        navegar('/painelGeral');
-    }
-
     return (
 
         <div className='container'>
@@ -37,7 +34,7 @@ const CardExecucaoSimulador = ({ titulo, status, evento }) => {
                 </div>
 
                 <div className='btnsConexaoSimulador'>
-                    <button onClick={conectaCamera} className="btnsLigadoSimulador">Iniciar</button>
+                    <button onClick={inicar} className={iniciar ? "btnsLigadoSimulador" : "btnsLigadoSimulador"}>{iniciar ? "Pausar" : "Iniciar"}</button>
                     <button onClick={conectaDala} className="btnsLigadoSimulador">Próximo Item</button>
                 </div>
 
@@ -52,14 +49,14 @@ const CardExecucaoSimulador = ({ titulo, status, evento }) => {
                 </div>
 
                 <div className='middleBtns'>
-                    <button onClick={() => trocaLote}>Trocar lote</button>
-                    <button onClick={voltaPainel}>Finalizar Processo</button>
+                    <button onClick={() => trocaLote}>Editar Item Atual</button>
+                    <button>Testar Item Novamente</button>
                 </div>
 
                 <div className='downBtns'>
                     <span>Faltou produto no lote?</span>
                     <button className='trocaDeLoteSimulador' onClick={() => trocaLote}>Trocar lote</button>
-                    <button className='finalizarSimulador' onClick={voltaPainel}>Finalizar Processo</button>
+                    <button className='finalizarSimulador' onClick={evento}>Finalizar Processo</button>
                 </div>
                 
             </div>

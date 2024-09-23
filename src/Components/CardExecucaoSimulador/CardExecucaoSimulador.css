@@ -1,6 +1,7 @@
 .boxCardSimulador{
     display: flex;
     width: 364px;
+    max-height: 468px;
     flex-direction: column;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
@@ -8,6 +9,7 @@
     margin: 30px 20px;
     font-family: 'Inter';
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 .opacity{

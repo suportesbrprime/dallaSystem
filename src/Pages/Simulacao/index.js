@@ -10,10 +10,15 @@ import CardExecucaoSimulador from '../../Components/CardExecucaoSimulador'
 import CardHistorico from '../../Components/CardHistorico'
 import { useState } from 'react'
 import ModalAlert from '../../Components/ModalAlerts'
+import { useNavigate } from 'react-router-dom'
+import InputFile from '../../Components/InputFile'
 
 const Simulacao = () => {
 
     const [iniciarOrdem, setIniciarOrdem] = useState(true);
+    const [cancelarOrdem, setCancelarOrdem] = useState(false);
+
+    const navegar = useNavigate();
 
     const itensMenu = [
         { icone: <FaHouse size={19} color="white" />, to: '/painelGeral', campo: 'Painel Geral'},
@@ -62,6 +67,14 @@ const Simulacao = () => {
         window.location.reload()
     }
 
+    function voltaPainel(){
+        navegar('/painelGeral');
+    }
+
+    function cancelar(){
+        setCancelarOrdem(!cancelarOrdem)
+    }
+
     return(
 
         <section>
@@ -69,6 +82,10 @@ const Simulacao = () => {
 
 
             <Titulo titulo="Simular" subtitulo="Simule o processo utilizando o Picking Up sem os módulos externos (Câmera e Dala)"/>
+
+            <div className='uploadPlanilha'>
+                <InputFile />
+            </div>
 
                 <div className="containerCards">
                     <CardsListaDeLeitura
@@ -79,6 +96,7 @@ const Simulacao = () => {
                     <CardExecucaoSimulador 
                         titulo="Execução"
                         status={listStatus}
+                        evento={cancelar}
                     />
 
                     <CardHistorico
@@ -88,12 +106,16 @@ const Simulacao = () => {
                 />
                 </div>
 
-
-            <ModalAlert
-                titulo="Deseja finalizar o processo?"
-                textBtn1="Sim, finalizar o processo"
-                textBtn2="Não, finalizar o processo"
-            />
+                <div className={cancelarOrdem ? "block" : "none"}>
+                    <ModalAlert
+                        titulo="Deseja finalizar o processo?"
+                        textBtn1="Cancelar e salvar as alterações"
+                        eventoBtn1={voltaPainel}
+                        textBtn2="Cancelar e não salvar as alterações"
+                        eventoBtn2={voltaPainel}
+                        evento={voltaPainel}
+                    />
+                </div>
         </section>
     )
 }

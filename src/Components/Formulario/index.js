@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Input from '../InputTexto';
 import './Formulario.css';
 import ModalTerms from '../ModalTerms';
-import { useHistory } from 'react-router-dom';
-import '../CardLogin';
+
 
 const Formulario = () => {
   const [email, setEmail] = useState('');
