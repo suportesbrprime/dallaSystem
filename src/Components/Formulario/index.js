@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import Input from '../InputTexto';
 import './Formulario.css';
 import ModalTerms from '../ModalTerms';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
+=======
+>>>>>>> 48514c26f16d6c3b845fddd4c43eca692581b11d
 
 
 const Formulario = () => {

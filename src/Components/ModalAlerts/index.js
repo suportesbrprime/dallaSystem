@@ -1,8 +1,6 @@
 import './ModalAlert.css'
 
-const ModalAlert = ({ titulo, textBtn1, textBtn2, evento }) =>{
-
-
+const ModalAlert = ({ titulo, textBtn1, eventoBtn1, textBtn2, eventoBtn2, evento }) =>{
 
     return (
         <div className="modal-overlay">
@@ -10,8 +8,8 @@ const ModalAlert = ({ titulo, textBtn1, textBtn2, evento }) =>{
                 <span>{titulo}</span>
 
                 <div className='btnsModal'>
-                    <button>{textBtn1}</button>
-                    <button>{textBtn2}</button>
+                    <button onClick={eventoBtn1}>{textBtn1}</button>
+                    <button onClick={eventoBtn2}>{textBtn2}</button>
                 </div>
 
                 <div className='btnVoltar'>
