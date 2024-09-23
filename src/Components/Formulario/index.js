@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import Input from '../InputTexto';
 import './Formulario.css';
 import ModalTerms from '../ModalTerms';
-import { useHistory } from 'react-router-dom';
-import '../CardLogin';
+import { useNavigate } from 'react-router-dom';
+
 
 const Formulario = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
-  
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     // Aqui você pode adicionar a lógica para enviar os dados do formulário
     console.log('Email:', email);
     console.log('Password:', password);
     console.log('Terms Accepted:', termsAccepted);
- 
+    navigate('./painelGeral');
   };
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);

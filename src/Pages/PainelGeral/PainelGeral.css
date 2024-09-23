@@ -1,0 +1,11 @@
+.painel{
+    color: #009B50;
+    padding: 40px;
+    font-family: Inter, sans-serif;
+}
+.text_line{
+    color: #000000;
+    font-family: Inter, sans-serif;
+    padding: 40px;
+    margin-top: -70px;
+}

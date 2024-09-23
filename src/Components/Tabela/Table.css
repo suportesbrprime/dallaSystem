@@ -1,0 +1,57 @@
+/* src/Components/Tabela.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(to right, #009B50, #004323); 
+    color: white; /* Cor do texto branco */
+    font-weight: bold; /* Texto em negrito */
+
+    border: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo cinza claro */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Cor de fundo branco */
+}
+
+tr:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}
+
+.table {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.simular-btn {
+    background-color: orange; /* Cor de fundo laranja */
+    color: white; /* Cor do texto branco */
+}
+
+.executar-btn {
+    background-color: green; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+}
+
+.expand-icon {
+    transition: transform 0.3s; /* Transição suave para rotação */
+}
+
+.expand-icon.expanded {
+    transform: rotate(180deg); /* Rotacionar 180 graus */
+}
+.header-cell{
+    color: white;
+}

@@ -3,7 +3,8 @@ import { FaHouse } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { LuRefreshCw } from "react-icons/lu";
 import { SlControlPlay } from "react-icons/sl";
-
+import Tabela from "../../Components/Tabela";
+import './PainelGeral.css'
 
 const PainelGeral = () =>{
 
@@ -22,8 +23,16 @@ const PainelGeral = () =>{
     }
 
     return (
-    
-    <Menu itens={itensMenu} botoes={botoes}/>
+    <div>
+        <Menu itens={itensMenu} botoes={botoes}/>
+        <h2 className="painel">Painel Geral</h2>
+        <p className="text_line"> Acompanhe todas as ordens pendentes <div>Selecione a ordem de carregamento</div>
+        </p>
+        <div className="tabela">
+            <Tabela />
+        </div>
+        
+    </div>
     )
 }
 
