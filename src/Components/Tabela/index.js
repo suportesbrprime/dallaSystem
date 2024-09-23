@@ -64,44 +64,166 @@ const Tabela = () => {
                                     <Button sx={{ backgroundColor: '#73EB7B', color: 'black', borderRadius: '50px'}} variant="contained" onClick={(handleExecutar)}>Executar</Button>
                                 </TableCell>
                             </TableRow>
-                            <TableRow>
-                                <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5}>
-                                    <Collapse in={detalhesVisiveis === row.id} timeout="auto" unmountOnExit>
-                                    <Table size="small" aria-label="sub table" sx={{borderRadius:'100px', marginBottom: '10px'}}>
-                                            <TableHead className="sub-table-header" sx={{ backgroundColor: '#f0f0f0', color: '#fffffff' }}>
-                                                <TableRow>
-                                                    <TableCell>Cliente</TableCell>
-                                                    <TableCell>Produtos</TableCell>
-                                                    <TableCell>Quantidade</TableCell>
-                                                </TableRow>
-                                            </TableHead>
-                                            <TableBody>
-                                                <TableRow>
-                                                    <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 1</TableCell>
-                                                    <TableCell sx={{fontFamily:'inter'}}>{row.produtos}<ul className="no-bullets"><li>Produto 1</li></ul></TableCell>
-                                                    <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li></ul></TableCell>
-                                                </TableRow>
-                                            </TableBody>
-                                        </Table>
-                                        <Table size="small" aria-label="sub table" sx={{backgroundColor:'white'}}>
-                                            <TableHead className='sub-table-header'>
-                                                <TableRow>
-                                                    <TableCell>Cliente</TableCell>
-                                                    <TableCell>Produtos</TableCell>
-                                                    <TableCell>Quantidade</TableCell>
-                                                </TableRow>
-                                            </TableHead>
-                                            <TableBody>
-                                                <TableRow>
-                                                    <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 2</TableCell>
-                                                    <TableCell sx={{fontFamily:'inter'}}>{row.produtos} <ul className="no-bullets"><li>Produto 1</li><li>Produto 2</li><li>Produto 3</li></ul></TableCell>
-                                                    <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li><li>100</li><li>80</li></ul></TableCell>
-                                                </TableRow>
-                                            </TableBody>
-                                        </Table>
-                                    </Collapse>
-                                </TableCell>
-                            </TableRow>
+                            {row.id === 1 &&(
+                                <TableRow>
+                                    <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5}>
+                                        <Collapse in={detalhesVisiveis === row.id} timeout="auto" unmountOnExit>
+                                        <Table size="small" aria-label="sub table" sx={{borderRadius:'100px', marginBottom: '15px'}}>
+                                                <TableHead className="sub-table-header" sx={{ backgroundColor: '#f0f0f0', color: '#fffffff' }}>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 1</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos}<ul className="no-bullets"><li>Produto 1</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                            <Table size="small" aria-label="sub table" sx={{backgroundColor:'white'}}>
+                                                <TableHead className='sub-table-header'>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 2</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos} <ul className="no-bullets"><li>Produto 1</li><li>Produto 2</li><li>Produto 3</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li><li>100</li><li>80</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </Collapse>
+                                    </TableCell>
+                                </TableRow>
+                        )}
+                        {row.id === 2 &&(
+                                <TableRow>
+                                    <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5}>
+                                        <Collapse in={detalhesVisiveis === row.id} timeout="auto" unmountOnExit>
+                                        <Table size="small" aria-label="sub table" sx={{borderRadius:'100px', marginBottom: '15px'}}>
+                                                <TableHead className="sub-table-header" sx={{ backgroundColor: '#f0f0f0', color: '#fffffff' }}>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 1</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos}<ul className="no-bullets"><li>Produto 1</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                            <Table size="small" aria-label="sub table" sx={{backgroundColor:'white'}}>
+                                                <TableHead className='sub-table-header'>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 2</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos} <ul className="no-bullets"><li>Produto 1</li><li>Produto 2</li><li>Produto 3</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li><li>100</li><li>80</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </Collapse>
+                                    </TableCell>
+                                </TableRow>
+                        )}
+                        {row.id === 3 &&(
+                                <TableRow>
+                                    <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5}>
+                                        <Collapse in={detalhesVisiveis === row.id} timeout="auto" unmountOnExit>
+                                        <Table size="small" aria-label="sub table" sx={{borderRadius:'100px', marginBottom: '15px'}}>
+                                                <TableHead className="sub-table-header" sx={{ backgroundColor: '#f0f0f0', color: '#fffffff' }}>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 1</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos}<ul className="no-bullets"><li>Produto 1</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                            <Table size="small" aria-label="sub table" sx={{backgroundColor:'white'}}>
+                                                <TableHead className='sub-table-header'>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 2</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos} <ul className="no-bullets"><li>Produto 1</li><li>Produto 2</li><li>Produto 3</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li><li>100</li><li>80</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </Collapse>
+                                    </TableCell>
+                                </TableRow>
+                        )}
+                        {row.id === 4 &&(
+                                <TableRow>
+                                    <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={5}>
+                                        <Collapse in={detalhesVisiveis === row.id} timeout="auto" unmountOnExit>
+                                        <Table size="small" aria-label="sub table" sx={{borderRadius:'100px', marginBottom: '15px'}}>
+                                                <TableHead className="sub-table-header" sx={{ backgroundColor: '#f0f0f0', color: '#fffffff' }}>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 1</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos}<ul className="no-bullets"><li>Produto 1</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                            <Table size="small" aria-label="sub table" sx={{backgroundColor:'white'}}>
+                                                <TableHead className='sub-table-header'>
+                                                    <TableRow>
+                                                        <TableCell>Cliente</TableCell>
+                                                        <TableCell>Produtos</TableCell>
+                                                        <TableCell>Quantidade</TableCell>
+                                                    </TableRow>
+                                                </TableHead>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.cliente} Nome do Cliente 2</TableCell>
+                                                        <TableCell sx={{fontFamily:'inter'}}>{row.produtos} <ul className="no-bullets"><li>Produto 1</li><li>Produto 2</li><li>Produto 3</li></ul></TableCell>
+                                                        <TableCell>{row.quantidade} <ul className="no-bullets"><li>50</li><li>100</li><li>80</li></ul></TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
+                                        </Collapse>
+                                    </TableCell>
+                                </TableRow>
+                        )}
                         </React.Fragment>
                     ))}
                 </TableBody>
