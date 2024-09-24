@@ -14,6 +14,9 @@ const CadastroDeUnidade = () => {
 
     const [subMenu, setSubMenu] = useState(false);
 
+    const [editando, setEditando] = useState(false);
+    const [indexEditando, setIndexEditando] = useState(null);
+
     const [nome, setNome] = useState('');
     const [endereco, setEndereco] = useState('');
     const [cnpj, setCnpj] = useState('');
@@ -48,7 +51,16 @@ const CadastroDeUnidade = () => {
             dalasInstaladas: dalas
         }
 
-        setRows([...rows, novaUnidade]);
+        if (editando) {
+            // Atualiza a unidade
+            const novasUnidades = [...rows];
+            novasUnidades[indexEditando] = novaUnidade; // Atualiza a unidade no índice correto
+            setRows(novasUnidades);
+            setEditando(false); // Sai do modo de edição
+        } else {
+            // Adiciona uma nova unidade
+            setRows([...rows, novaUnidade]);
+        }
 
         setNome('');
         setEndereco('');
@@ -56,8 +68,14 @@ const CadastroDeUnidade = () => {
         setDalas('');
     }
 
-    function editaUnidade (){
-
+    function editaUnidade (index){
+        const unidade = rows[index];
+        setNome(unidade.nome);
+        setEndereco(unidade.endereco);
+        setCnpj(unidade.cnpj);
+        setDalas(unidade.dalasInstaladas);
+        setEditando(true);
+        setIndexEditando(index);
     }
 
     return (

@@ -35,7 +35,7 @@ const TabelaAdmin = ({ cnpj, rows, evento }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.map((row, index) => (
             <TableRow
               key={row.nome}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -47,7 +47,7 @@ const TabelaAdmin = ({ cnpj, rows, evento }) => {
               {cnpj ? <TableCell align="left">{row.cnpj}</TableCell> : ''}
               <TableCell align="center">{row.dalasInstaladas}</TableCell>
               <TableCell align="center">
-                <Button onClick={evento} sx={{ backgroundColor: `${cnpj ? '#4FC8FB' : '#73EB7B'}`, color: 'black', borderRadius: '50px', marginRight: '15px' }} variant="contained">
+                <Button onClick={() => evento(index)} sx={{ backgroundColor: `${cnpj ? '#4FC8FB' : '#73EB7B'}`, color: 'black', borderRadius: '50px', marginRight: '15px' }} variant="contained">
                   {cnpj ? "Editar" : "Selecionar"}
                 </Button>
               </TableCell>
