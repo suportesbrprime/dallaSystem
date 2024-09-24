@@ -6,51 +6,62 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Button } from '@mui/material';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(nome, local, dalasInstaladas) {
+  return { nome, local, dalasInstaladas };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Unidade 1', "Ribeirão Preto", 6),
+  createData('Unidade 2', "Presidente Prudente", 9),
+  createData('Unidade 3', "Ribeirão Preto", 16),
+  createData('Unidade 4', "Ribeirão Preto", 3),
+  createData('Unidade 5', "Ribeirão Preto", 16),
 ];
 
-const BasicTable = () => {
+const TabelaAdmin = ({ cnpj }) => {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} sx={{ maxHeight: 440, marginTop: 5}}>
+      <Table sx={{ maxWidth: 1250, marginLeft:'40px'}} stickyHeader aria-label="sticky table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell style={{ width: '25%', backgroundColor: '#3D955A', color: 'white', position: 'sticky', top: 0, zIndex: 1 }}>
+              Nome
+            </TableCell>
+            <TableCell align="left" style={{ width: '25%', backgroundColor: '#3D955A', color: 'white', position: 'sticky', top: 0, zIndex: 1 }}>
+              Endereço
+            </TableCell>
+            <TableCell align="center" style={{ width: '20%', backgroundColor: '#3D955A', color: 'white', position: 'sticky', top: 0, zIndex: 1 }}>
+              {cnpj ? "CNPJ" : "Dalas Instaladas" }
+            </TableCell>
+            <TableCell align="center" style={{ width: '30%', backgroundColor: '#3D955A', color: 'white', position: 'sticky', top: 0, zIndex: 1 }}>
+              Ações
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.nome}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.nome}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="left">{row.local}</TableCell>
+              <TableCell align="center">{row.dalasInstaladas}</TableCell>
+              <TableCell align="center">
+                <Button sx={{ backgroundColor: '#73EB7B', color: 'black', borderRadius: '50px', marginRight: '15px' }} variant="contained">
+                  Selecionar
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
   );
-}
+};
 
-export default BasicTable
+export default TabelaAdmin;
