@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material"
 
 
-const InputTextoAdmin = ({ label }) =>{
+const InputTextoAdmin = ({label}) =>{
     return (
         <div style={{ margin: '20px' }}>
             <TextField id="filled-basic" label={label} variant="filled"
