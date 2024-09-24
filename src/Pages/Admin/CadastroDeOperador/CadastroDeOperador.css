@@ -1,0 +1,10 @@
+.formCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.tabela {
+    margin: 20px;
+}
