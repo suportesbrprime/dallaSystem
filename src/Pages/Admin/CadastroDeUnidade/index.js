@@ -14,6 +14,11 @@ const CadastroDeUnidade = () => {
 
     const [subMenu, setSubMenu] = useState(false);
 
+    const [nome, setNome] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [cnpj, setCnpj] = useState('');
+    const [dalas, setDalas] = useState('');
+
     const itensMenu = [
         { icone: <FaHouse size={19} color="white" />, to: '/painelGeralAdmin', campo: 'Painel Geral'},
         { icone: <MdAccountCircle size={20} color="white" />, to: '/perfil', campo: 'Perfil'},
@@ -23,8 +28,32 @@ const CadastroDeUnidade = () => {
         {evento:abreSubMenu, icone: <LuFileEdit size={20}/>, textoBtn:"Cadastro"}
     ]
 
+    const [rows, setRows] = useState([
+        {nome: 'Unidade 1', endereco: "Ribeirão Preto", cnpj: 182739812, dalasInstaladas: 6},
+        {nome: 'Unidade 2', endereco: "Presidente Prudente", cnpj: 182739812, dalasInstaladas: 9},
+        {nome: 'Unidade 3', endereco: "Ribeirão Preto", cnpj: 182739812, dalasInstaladas: 16},
+        {nome: 'Unidade 4', endereco: "Ribeirão Preto", cnpj: 182739812, dalasInstaladas: 3},
+        {nome: 'Unidade 5', endereco: "Ribeirão Preto", cnpj: 182739812, dalasInstaladas: 16},
+    ]);
+
     function abreSubMenu(){
         setSubMenu(!subMenu);
+    }
+
+    function adicionaUnidade(){
+        const novaUnidade = {
+            nome: nome,
+            endereco: endereco,
+            cnpj: cnpj,
+            dalasInstaladas: dalas
+        }
+
+        setRows([...rows, novaUnidade]);
+
+        setNome('');
+        setEndereco('');
+        setCnpj('');
+        setDalas('');
     }
 
     return (
@@ -38,16 +67,16 @@ const CadastroDeUnidade = () => {
             <Titulo titulo="Cadastro De Unidade" subtitulo=""/>
 
             <form className="formCadastro">
-                <InputTextoAdmin label="Nome"/>
-                <InputTextoAdmin label="Endereço"/>
-                <InputTextoAdmin label="CNPJ"/>
-                <InputNumber />
+                <InputTextoAdmin label="Nome" evento={(e) => setNome(e.target.value)}/>
+                <InputTextoAdmin label="Endereço" evento={(e) => setEndereco(e.target.value)}/>
+                <InputTextoAdmin label="CNPJ" evento={(e) => setCnpj(e.target.value)}/>
+                <InputNumber evento={(e) => setDalas(e.target.value)} />
                 <div style={{ margin: '20px', display: 'flex', justifyContent: 'flex-end' }}>
-                    <Button sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px' }} variant="contained">Salvar</Button>
+                    <Button onClick={adicionaUnidade} sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px' }} variant="contained">Salvar</Button>
                 </div>
             </form>
 
-            <TabelaAdmin cnpj={true}/>
+            <TabelaAdmin cnpj={true} rows={rows}/>
         </div> 
     )
 

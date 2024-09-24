@@ -20,6 +20,14 @@ const PainelGeralAdmin = () =>{
         {evento:abreSubMenu, icone: <LuFileEdit  size={20}/>, textoBtn:"Cadastro"}
     ]
 
+    const rows = [
+        {nome: 'Unidade 1', endereco: "Ribeirão Preto", dalasInstaladas: 6},
+        {nome: 'Unidade 2', endereco: "Presidente Prudente", dalasInstaladas: 9},
+        {nome: 'Unidade 3', endereco: "Ribeirão Preto", dalasInstaladas: 16},
+        {nome: 'Unidade 4', endereco: "Ribeirão Preto", dalasInstaladas: 3},
+        {nome: 'Unidade 5', endereco: "Ribeirão Preto", dalasInstaladas: 16},
+    ]
+
     function abreSubMenu(){
         setSubMenu(!subMenu);
     }
@@ -35,7 +43,7 @@ const PainelGeralAdmin = () =>{
             <Titulo titulo="Painel Geral" subtitulo="Acompanhe todas as unidades cadastradas Selecione a unidade para obter mais detalhes"/>
 
             <div className="boxTabela">
-                <TabelaAdmin cnpj={false}/>
+                <TabelaAdmin rows={rows} cnpj={false}/>
             </div>
         </div>
     )

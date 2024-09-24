@@ -1,10 +1,13 @@
 import { TextField } from "@mui/material"
 
 
-const InputTextoAdmin = ({ label }) =>{
+const InputTextoAdmin = ({ label, evento }) =>{
     return (
         <div style={{ margin: '20px' }}>
-            <TextField id="filled-basic" label={label} variant="filled"
+            <TextField 
+                onChange={evento}
+                id="filled-basic" 
+                label={label} variant="filled"
                 sx={{
                     backgroundColor: '#EFEFEF',
                     boxShadow: '0px 4px 4px 0px #00000040',
