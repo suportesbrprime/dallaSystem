@@ -11,7 +11,7 @@ import { Button } from '@mui/material';
 
 
 
-const TabelaAdmin = ({ cnpj, rows }) => {
+const TabelaAdmin = ({ cnpj, rows, evento }) => {
   return (
     <TableContainer component={Paper} sx={{ maxHeight: 440, marginTop: 5}}>
       <Table sx={{ maxWidth: 1250, marginLeft:'40px'}} stickyHeader aria-label="sticky table">
@@ -47,7 +47,7 @@ const TabelaAdmin = ({ cnpj, rows }) => {
               {cnpj ? <TableCell align="left">{row.cnpj}</TableCell> : ''}
               <TableCell align="center">{row.dalasInstaladas}</TableCell>
               <TableCell align="center">
-                <Button sx={{ backgroundColor: `${cnpj ? '#4FC8FB' : '#73EB7B'}`, color: 'black', borderRadius: '50px', marginRight: '15px' }} variant="contained">
+                <Button onClick={evento} sx={{ backgroundColor: `${cnpj ? '#4FC8FB' : '#73EB7B'}`, color: 'black', borderRadius: '50px', marginRight: '15px' }} variant="contained">
                   {cnpj ? "Editar" : "Selecionar"}
                 </Button>
               </TableCell>

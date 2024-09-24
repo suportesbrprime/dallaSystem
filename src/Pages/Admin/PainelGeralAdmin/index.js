@@ -43,7 +43,7 @@ const PainelGeralAdmin = () =>{
             <Titulo titulo="Painel Geral" subtitulo="Acompanhe todas as unidades cadastradas Selecione a unidade para obter mais detalhes"/>
 
             <div className="boxTabela">
-                <TabelaAdmin rows={rows} cnpj={false}/>
+                <TabelaAdmin rows={rows} cnpj={false} evento=""/>
             </div>
         </div>
     )

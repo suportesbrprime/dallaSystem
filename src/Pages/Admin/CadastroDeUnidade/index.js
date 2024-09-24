@@ -56,6 +56,10 @@ const CadastroDeUnidade = () => {
         setDalas('');
     }
 
+    function editaUnidade (){
+
+    }
+
     return (
         <div>
             <Menu itens={itensMenu} botoes={botoes}/>
@@ -67,16 +71,16 @@ const CadastroDeUnidade = () => {
             <Titulo titulo="Cadastro De Unidade" subtitulo=""/>
 
             <form className="formCadastro">
-                <InputTextoAdmin label="Nome" evento={(e) => setNome(e.target.value)}/>
-                <InputTextoAdmin label="Endereço" evento={(e) => setEndereco(e.target.value)}/>
-                <InputTextoAdmin label="CNPJ" evento={(e) => setCnpj(e.target.value)}/>
-                <InputNumber evento={(e) => setDalas(e.target.value)} />
+                <InputTextoAdmin value={nome} label="Nome" evento={(e) => setNome(e.target.value)}/>
+                <InputTextoAdmin value={endereco} label="Endereço" evento={(e) => setEndereco(e.target.value)}/>
+                <InputTextoAdmin value={cnpj} label="CNPJ" evento={(e) => setCnpj(e.target.value)}/>
+                <InputNumber value={dalas} evento={(e) => setDalas(e.target.value)} />
                 <div style={{ margin: '20px', display: 'flex', justifyContent: 'flex-end' }}>
                     <Button onClick={adicionaUnidade} sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px' }} variant="contained">Salvar</Button>
                 </div>
             </form>
 
-            <TabelaAdmin cnpj={true} rows={rows}/>
+            <TabelaAdmin cnpj={true} rows={rows} evento={editaUnidade}/>
         </div> 
     )
 
