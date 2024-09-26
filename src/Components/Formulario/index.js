@@ -33,7 +33,7 @@ const Formulario = () => {
     <section className="estrutura">
       <div className="estrutura_login">
         <form onSubmit={handleSubmit}>
-          <div className="estrutura_login_email">
+          <div className="estrutura_login_login_email">
             <Input 
               nome="Email"
               type="email"
