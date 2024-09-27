@@ -8,8 +8,6 @@ import Simulacao from './Pages/Operador/Simulacao';
 import PainelGeralAdmin from './Pages/Admin/PainelGeralAdmin';
 import CadastroDeUnidade from './Pages/Admin/CadastroDeUnidade';
 import CadastroDeOperador from './Pages/Admin/CadastroDeOperador';
-
-
 import DetalhesDala from './Pages/Admin/DetalhesDala';
 import PerfilAdmin from './Pages/Admin/PerfilAdmin';
 

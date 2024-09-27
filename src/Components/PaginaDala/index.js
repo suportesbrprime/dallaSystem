@@ -30,8 +30,10 @@ const PaginaDala = () => {
         { nome: 'Operador 5', dala: "Dala 5" },
     ]);
 
-    const onChange = (checked) => {
-        console.log(`switch to ${checked}`);
+    const [dalaAtiva, setDalaAtiva] = useState(false);
+
+    const ativaDala = () => {
+        setDalaAtiva(!dalaAtiva);
     };
 
     const handleEditToggle = (index) => {
@@ -63,8 +65,7 @@ const PaginaDala = () => {
                     <h2>Unidade 1</h2>
                     <p>Rua brasilândia, 1028, tiradentes - Campo Grande, MS </p>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '18px' }}>
-                        <p style={{ marginRight: '10px', backgroundColor: 'white', color: 'black', textAlign: 'center', padding: '5px 10px', borderRadius: '8px' }}>Dala Ativada</p>
-                        <Switch defaultChecked onChange={onChange} />
+                        <Button onClick={ativaDala} sx={{ color: `${dalaAtiva ? 'white' : 'black'}` , backgroundColor: `${dalaAtiva ? '#6e6e6e' : '#ffffff'}`, fontWeight: 'bold' }} variant="contained">{dalaAtiva ? 'Dala Desativada' : 'Dala Ativada'}</Button>
                     </div>
                 </div>
 
