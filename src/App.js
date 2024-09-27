@@ -8,7 +8,9 @@ import Simulacao from './Pages/Operador/Simulacao';
 import PainelGeralAdmin from './Pages/Admin/PainelGeralAdmin';
 import CadastroDeUnidade from './Pages/Admin/CadastroDeUnidade';
 import CadastroDeOperador from './Pages/Admin/CadastroDeOperador';
+
 import DetalhesDala from './Pages/Admin/DetalhesDala';
+import PerfilAdmin from './Pages/Admin/PerfilAdmin';
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path="/cadastroDeUnidade" element={<CadastroDeUnidade />}/>
         <Route path="/cadastroDeOperador" element={<CadastroDeOperador />}/>
         <Route path="/dalas" element={<DetalhesDala />}/>
+        <Route path="/perfilAdmin" element={<PerfilAdmin/>}/>
         <Route path="*" element={<div>Página não encontrada</div>}/>
       </Routes>
    </BrowserRouter>

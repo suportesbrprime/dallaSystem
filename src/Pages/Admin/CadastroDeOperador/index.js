@@ -9,6 +9,7 @@ import InputNumber from "../../../Components/InputNumber";
 import { Button } from "@mui/material";
 import { Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 import TabelaOperador from "../../../Components/TabelaOperador";
+import Titulo from "../../../Components/Titulo";
 
 const CadastroDeOperador = () => {
 
@@ -82,6 +83,7 @@ const CadastroDeOperador = () => {
 
         <div>
             <Menu itens={itensMenu} botoes={botoes} />
+            <Titulo titulo='Cadastro de Operador' subtitulo = ''/>
             <form className="formCadastro">
                 <InputTextoAdmin label='nome' value={nome} evento={(e) => setNome(e.target.value)}/>
                 <InputTextoAdmin label='email' value={email} evento={(e) => setEmail(e.target.value)}/>
@@ -93,7 +95,7 @@ const CadastroDeOperador = () => {
                             labelId="seletor-unnidade-label"
                             id="seletor-unidade"
                             value={unidade}
-                            label="Escolha uma cidade"
+                            label="Escolha uma Unidade"
                             onChange={handleChange}
                             sx={{
                                 backgroundColor: '#EFEFEF',

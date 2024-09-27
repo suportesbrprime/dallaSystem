@@ -6,14 +6,16 @@ import DropDown from "../../../Components/DropDown";
 import { useState } from "react";
 import Titulo from "../../../Components/Titulo";
 import TabelaAdmin from "../../../Components/TabelaAdmin";
+import { useNavigate } from "react-router-dom";
 
 const PainelGeralAdmin = () =>{
 
     const [subMenu, setSubMenu] = useState(false);
+    const navigate = useNavigate();
 
     const itensMenu = [
         { icone: <FaHouse size={19} color="white" />, to: '/painelGeralAdmin', campo: 'Painel Geral'},
-        { icone: <MdAccountCircle size={20} color="white" />, to: '/perfil', campo: 'Perfil'},
+        { icone: <MdAccountCircle size={20} color="white" />, to: '/perfilAdmin', campo: 'Perfil', evento: () => navigate('./perfilAdmin')},
     ]
 
     const botoes = [
