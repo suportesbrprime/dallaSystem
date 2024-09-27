@@ -70,14 +70,8 @@ const PerfilAdmin = () => {
                         fullWidth
                         margin="normal"
                     />
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleSave}
-                        sx={{ marginTop: 2 }}
-                    >
-                        Salvar
-                    </Button>
+                   <Button onClick={handleSave} sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px'}} variant="contained">Salvar</Button>
+
                 </form>
             ) : (
                 <div className='conteiner'>
