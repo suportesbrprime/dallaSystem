@@ -10,6 +10,8 @@ import { Button } from "@mui/material";
 import { Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 import TabelaOperador from "../../../Components/TabelaOperador";
 import Titulo from "../../../Components/Titulo";
+import DropDown from "../../../Components/DropDown";
+import { useNavigate } from "react-router-dom";
 
 const CadastroDeOperador = () => {
 
@@ -19,10 +21,11 @@ const CadastroDeOperador = () => {
     const [email, setEmail] = useState('');
     const [dala, setDala] = useState('');
     const [unidade, setUnidade] = useState('');
+    const navigate = useNavigate();
 
     const itensMenu = [
         { icone: <FaHouse size={19} color="white" />, to: '/painelGeralAdmin', campo: 'Painel Geral'},
-        { icone: <MdAccountCircle size={20} color="white" />, to: '/perfil', campo: 'Perfil'},
+        { icone: <MdAccountCircle size={20} color="white" />, to: '/perfilAdmin', campo: 'Perfil', evento: () => navigate('./perfilAdmin')},
     ]
     const botoes = [
         {evento:abreSubMenu, icone: <LuFileEdit  size={20}/>, textoBtn:"Cadastro"}
@@ -53,9 +56,6 @@ const CadastroDeOperador = () => {
         }
     }
     
-    function abreSubMenu(){
-        setSubMenu(!subMenu);
-    }
 
     function adicionaOperador(){
         const novoOperador = {
@@ -83,6 +83,9 @@ const CadastroDeOperador = () => {
 
         <div>
             <Menu itens={itensMenu} botoes={botoes} />
+            <div className={subMenu ? "block" : "none"}>
+                <DropDown />  
+            </div>
             <Titulo titulo='Cadastro de Operador' subtitulo = ''/>
             <form className="formCadastro">
                 <InputTextoAdmin label='nome' value={nome} evento={(e) => setNome(e.target.value)}/>
@@ -98,7 +101,7 @@ const CadastroDeOperador = () => {
                             label="Escolha uma Unidade"
                             onChange={handleChange}
                             sx={{
-                                backgroundColor: '#EFEFEF',
+                                backgroundColor: '#DADADA',
                                 boxShadow: '0px 4px 4px 0px #00000040',
                                 color: 'black',
                                 width: '100%',
@@ -110,8 +113,8 @@ const CadastroDeOperador = () => {
                             <MenuItem value="Unidade 4">Unidade 4</MenuItem>
                         </Select>
                     </FormControl>
-                    <TextField sx={{width:'25%', marginTop: '15%', margin:'5%', backgroundColor:'#EFEFEF',boxShadow: '0px 4px 4px 0px #00000040', color:'black'}} label='Senha'/>
-                    <TextField sx={{width:'25%', marginTop: '15%', margin:'5%', marginLeft:'5px', backgroundColor:'#EFEFEF',boxShadow: '0px 4px 4px 0px #00000040', color:'black'}} label='Confirme a senha'/>
+                    <TextField sx={{width:'25%', marginTop: '15%', margin:'5%', backgroundColor:'#DADADA',boxShadow: '0px 4px 4px 0px #00000040', color:'black'}} label='Senha'/>
+                    <TextField sx={{width:'25%', marginTop: '15%', margin:'5%', marginLeft:'5px', backgroundColor:'#DADADA',boxShadow: '0px 4px 4px 0px #00000040', color:'black'}} label='Confirme a senha'/>
                 </div>
                 <div style={{ margin: '5px', display: 'flex', justifyContent: 'flex-end' }}>
                     <Button onClick={adicionaOperador} sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px' }} variant="contained">

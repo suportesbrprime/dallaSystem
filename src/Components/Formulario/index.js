@@ -3,6 +3,7 @@ import Input from '../InputTexto';
 import './Formulario.css';
 import ModalTerms from '../ModalTerms';
 import { useNavigate } from 'react-router-dom';
+import { Checkbox, FormControlLabel } from '@mui/material';
 
 
 
@@ -52,16 +53,16 @@ const Formulario = () => {
             />
           </div>
           <div className="estrutura_login_terms">
-            <input className='check_terms'
-              type="checkbox"
-              checked={termsAccepted}
-              onChange={(e) => setTermsAccepted(e.target.checked)} 
-              required
-            />  
-            <span className='link_link1'>Aceito os</span>
-            <span className="link_link2" onClick={openTermsModal}>Termos de Uso</span> 
-            <span className='link_link3'> e </span> 
-            <span className="link_link4" onClick={openPrivacyModal}>Política de Privacidade</span>       
+
+              <Checkbox className='checkbox_terms'
+                  checked={termsAccepted}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
+                  required
+              />
+              <span className='link_link1'>Aceito os</span>
+              <span className="link_link2" onClick={openTermsModal}>Termos de Uso</span>
+              <span className='link_link3'> e </span>
+              <span className="link_link4" onClick={openPrivacyModal}>Política de Privacidade</span>      
           </div>
           <div className="style_botao">
             <button type="submit" className="submit-button">

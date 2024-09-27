@@ -105,7 +105,6 @@
   margin-bottom: 40px;
   font-family: Inter, sans-serif;
   font-size: 12px;
-  background-color: black;
 }
 .estrutura_login_img {
   margin-left: 100px;
@@ -115,16 +114,14 @@
   align-items: flex-end;
   background-color: #ffffff;
 }
-.check_terms{
- 
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  height: 15px;
+
+.checkbox_terms {
+  margin-right: 10px; /* Espaço entre o checkbox e os termos */
+  width: 10%; /* Ajuste conforme necessário */
+  height: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
 }
+
 
 .style_terms{
   font-size: 12px;
@@ -147,4 +144,7 @@
 }
 .forgot-password{
   margin: 10px;
+}
+.checkbox_container .MuiFormControl-root::after {
+  content: none;
 }

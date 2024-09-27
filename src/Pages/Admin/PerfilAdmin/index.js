@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button, TextField } from '@mui/material';
 import Menu from '../../../Components/Menu';
 import { FaHouse } from 'react-icons/fa6';
-import { MdAccountCircle } from 'react-icons/md';
 import { LuFileEdit } from 'react-icons/lu';
 import Titulo from '../../../Components/Titulo';
 import './perfil.css';
@@ -34,7 +33,14 @@ const PerfilAdmin = () => {
             <Titulo className='titulo' titulo="Perfil do Administrador" subtitulo="" />
             {isEditing ? (
                 <form className="formCadastro">
-                    <TextField
+                    <TextField 
+                        sx={{
+                            backgroundColor: '#DADADA',
+                            boxShadow: '0px 4px 4px 0px #00000040',
+                            color: 'black',
+                            width: '95%',
+                            marginLeft: '30px',
+                        }}
                         id="nome"
                         label="Nome"
                         variant="outlined"
@@ -43,7 +49,14 @@ const PerfilAdmin = () => {
                         fullWidth
                         margin="normal"
                     />
-                    <TextField
+                    <TextField 
+                        sx={{
+                            backgroundColor: '#DADADA',
+                            boxShadow: '0px 4px 4px 0px #00000040',
+                            color: 'black',
+                            width: '95%',
+                            marginLeft: '30px',
+                        }}
                         id="email"
                         label="Email"
                         variant="outlined"
@@ -52,7 +65,14 @@ const PerfilAdmin = () => {
                         fullWidth
                         margin="normal"
                     />
-                    <TextField
+                    <TextField                 
+                        sx={{
+                            backgroundColor: '#DADADA',
+                            boxShadow: '0px 4px 4px 0px #00000040',
+                            color: 'black',
+                            width: '95%',
+                            marginLeft: '30px',
+                        }}
                         id="endereco"
                         label="Endereço"
                         variant="outlined"
@@ -61,7 +81,14 @@ const PerfilAdmin = () => {
                         fullWidth
                         margin="normal"
                     />
-                    <TextField
+                    <TextField 
+                        sx={{
+                            backgroundColor: '#DADADA',
+                            boxShadow: '0px 4px 4px 0px #00000040',
+                            color: 'black',
+                            width: '95%',
+                            marginLeft: '30px',
+                        }}
                         id="cnpj"
                         label="CNPJ"
                         variant="outlined"
@@ -70,8 +97,9 @@ const PerfilAdmin = () => {
                         fullWidth
                         margin="normal"
                     />
-                   <Button onClick={handleSave} sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px'}} variant="contained">Salvar</Button>
-
+                    <div style={{ margin: '5px', display: 'flex', justifyContent: 'flex-end' }}>
+                        <Button onClick={handleSave} sx={{ backgroundColor: '#00B15C', color: 'white', borderRadius: '50px', marginRight: '15px'}} variant="contained">Salvar</Button>
+                    </div>
                 </form>
             ) : (
                 <div className='conteiner'>
