@@ -60,7 +60,7 @@ const CadastroDeOperador = () => {
     function adicionaOperador(){
         const novoOperador = {
             nome: nome,
-            email: email,
+            email: email,   
             dala: dala,
             unidade: unidade
         };
