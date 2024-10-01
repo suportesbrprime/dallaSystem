@@ -25,7 +25,7 @@ const CardExecucao = ({ titulo, status, evento }) => {
     }
 
     function voltaPainel(){
-        navegar('/painelGeral');
+        navegar('/');
     }
 
     return (
