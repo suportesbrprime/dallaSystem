@@ -44,7 +44,7 @@ const CardExecucao = ({ titulo, status, evento }) => {
                 <div className='status'>    
                     <span>Status do processo:</span>
                     {status.map((item, index) => (
-                        <div index={index}>
+                        <div key={index}>
                             <p>{item.status}</p>
                             <p>{loteTrocado ? "Lote trocado" : ""}</p>
                         </div>
